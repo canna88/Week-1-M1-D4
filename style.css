@@ -1,0 +1,83 @@
+
+.button-general {
+    font-family: 'PT Serif', serif;
+    position: absolute;
+    top: 0px;
+    right: 30px;
+    border-radius: 100px;
+    font-size: 20;
+    font-weight: bold;
+    background-color: rgb(218, 13, 13);
+    color: white;
+    padding: 15px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+
+.div-top-bar {
+    background-color: orange;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div-top-bar.bottom {
+    background-color: orange;
+    height: 50px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.div-top-bar.bottom.white {
+    background-color: rgb(255, 255, 255);
+    height: 50px;
+    border-top: 0px solid black;
+    border-bottom: 1px solid gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div-top-bar-int {
+    width: 500px;
+    height: 100%;
+    border: 1px solid rebeccapurple;
+}
+.container-main {
+    background-color: lightpink;
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-main-2 {
+    background-color: rgb(188, 255, 182);
+    height:100%;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.container-main-left {
+    height: 100%;
+    width: 70%;
+    background-color: rgb(43, 226, 156);
+}
+
+.container-main-right {
+    height: 100%;
+    width: 30%;
+    background-color: rgb(194, 149, 236);
+}
+
