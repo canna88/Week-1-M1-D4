@@ -1,83 +1,431 @@
 
-.button-general {
-    font-family: 'PT Serif', serif;
-    position: absolute;
-    top: 0px;
-    right: 30px;
-    border-radius: 100px;
-    font-size: 20;
+@import url('https://fonts.googleapis.com/css2?family=Kanit&family=Merriweather:wght@300&family=Montserrat:wght@200&family=Open+Sans:wght@500&family=Raleway:wght@600&display=swap');
+
+
+/*BUTTONS*/
+.button-gray {
+    border-radius: 30px;
+    font-size: 10;
+    background-color: rgb(242, 242, 242);
+    color: black;
+    width: auto;
+    height: auto;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-right: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease; /* Aggiunge una transizione graduale alla proprietà background-color */
+    font-size: 8px;
+    font-family: 'Montserrat', sans-serif;
     font-weight: bold;
-    background-color: rgb(218, 13, 13);
+}
+
+.button-gray.gray {
+    color: grey;
+}
+
+.button-gray:hover {
+    background-color: rgb(230, 230, 230); /* Imposta il colore di sfondo più scuro al passaggio del mouse */
+    cursor: pointer;  
+}
+
+  .button-black {
+    border-radius: 30px;
+    font-size: 12;
+    background-color: rgb(50, 50, 50);
     color: white;
-    padding: 15px;
     width: 100px;
+    height: auto;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-right: 5px;
     display: flex;
-    justify-content: center;
     align-items: center;
-    opacity: 0;
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    justify-content: center;
+    transition: background-color 0.3s ease; /* Aggiunge una transizione graduale alla proprietà background-color */
+    font-family: 'Open Sans', sans-serif;
+
 }
 
+.button-black.small {
+    width: auto;
+    font-size: 9;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-right: 0px;
+        cursor: pointer;  
+}
 
+.button-black:hover {
+    background-color: black; /* Imposta il colore di sfondo più scuro al passaggio del mouse */
+    cursor: pointer;  
+}
+
+  body{
+    margin: 0%;
+  }
+
+
+/*TOP CONTAINERS*/
 .div-top-bar {
-    background-color: orange;
-    height: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.div-top-bar.bottom {
-    background-color: orange;
-    height: 50px;
-    border-top: 1px solid black;
+    background-color: rgb(255, 192, 23);
     border-bottom: 1px solid black;
+    height: 40px; 
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.div-top-bar.bottom.white {
-    background-color: rgb(255, 255, 255);
-    height: 50px;
-    border-top: 0px solid black;
-    border-bottom: 1px solid gray;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
 }
 
 .div-top-bar-int {
-    width: 500px;
+    width: 800px;
     height: 100%;
-    border: 1px solid rebeccapurple;
+    display: flex;
+    align-items: center;
+    padding-left: 40px;
+    padding-right: 80px;
 }
+
+.div-top-bar-half {
+    width: 30%;
+    justify-content:left;
+    align-items: center;
+
+}
+.div-top-bar-half-2 {
+    display: flex;
+    width: 70%;
+    gap: 10px;
+    font-size: 10;
+    justify-content: right;
+    align-items: center;
+}
+
+.div-top-bar-2 {
+    background-color: rgb(255, 192, 23);
+    height: 300px;
+    position:relative;
+    margin-top: 40px; /* Sposta il secondo container verso il basso di 20px rispetto al container principale */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid black;
+    width: 100%;
+}
+
+.div-top-bar-int-2 {
+    width: 800px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 40px;
+    padding-left: 40px;
+}
+
+.title {
+    font-size: 65;
+    font-family: 'Merriweather', serif;
+
+}
+
+.sentence {
+    font-size: 15;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.div-top-bar-white {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 0px solid black;
+    border-bottom: 1px solid rgb(230, 230, 230);
+}
+
+.div-top-bar-white-top {
+    margin-top: 10px;
+    height: 20%;
+    display: flex;
+    align-items: center;
+
+
+}
+
+.arrow {
+    width: 12px;
+    height: 12px;
+    margin-right: 10px;
+}
+
+.div-top-bar-white-body {
+    height: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.div-top-bar-white-body-card {
+    width: 33%;
+    height: 50%;
+    display: flex;
+}
+
+.div-top-bar-white-body-card-num {
+    width: 15%;
+    height: 100%;
+    font-size: 20;
+    font-weight: bold;
+    color: lightgrey;
+    font-family: 'Montserrat', sans-serif;
+
+}
+.div-top-bar-white-body-card-body {
+    width: 85%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
 .container-main {
-    background-color: lightpink;
     height:100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 20px;
+    padding-right: 20px;
+
 }
 
 .container-main-2 {
-    background-color: rgb(188, 255, 182);
     height:100%;
-    width: 500px;
+    width: 800px;
     display: flex;
     justify-content: center;
     align-items: center;
 
+
 }
 
+
+/*BODY CONTAINERS - RIGHT*/
+.container-main-right {
+    height: 100%;
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    position: sticky;
+    top: 40px;
+}
+
+.container-right-sticky{
+    width: 100%;
+    height: auto;
+    position: sticky;
+    top: 40px;
+}
+.container-right {
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 7px;
+    padding: 2px;
+}
+
+.container-right.buttons {
+    padding-left: 15px;
+}
+
+.container-right.bordergrey {
+    border-top: 1px solid rgb(230, 230, 230);
+    padding-top: 20px;
+    gap: 8px;
+}
+
+.paragraph-right-title {
+    font-size: 10;
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+.paragraph-right {
+    color: green;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+
+}
+
+.paragraph-help {
+    font-size: 10;
+    color: grey;
+    margin-right: 5;
+    font-size: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    
+}
+
+.paragraph-top-bar {
+    font-size: 10;
+    color: black;
+    font-size: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    
+}
+
+
+.paragraph-right:hover {
+    color: darkgrey;
+}
+
+/*BODY CONTAINERS - LEFT*/
 .container-main-left {
     height: 100%;
     width: 70%;
-    background-color: rgb(43, 226, 156);
+    display: flex;
+    flex-direction: column;
+    margin-right: 30px;
 }
 
-.container-main-right {
-    height: 100%;
+.container-card {
+    height: 120px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.container-card-body {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-card-body-content {
+    margin-left: 5px;
+    margin-top: 2px;
+}
+.container-card-body-content.author{
+    font-size: 10px;
+    display: flex;
+    justify-content: left;
+    gap: 5px;
+    align-items: center;
+}
+
+.container-card-body-content.title {
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 'Kanit', sans-serif;
+
+}
+
+.container-card-body-content.title2 {
+    font-size: 12px;
+    font-weight: bold;
+    font-family: 'Kanit', sans-serif;
+
+}
+
+.container-card-body-content.description {
+    font-size: 10px;
+    color: rgb(0, 0, 0);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;   
+}
+.container-card-paragraph {
+    margin-right: 5px;
+    font-size: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+
+}
+
+.container-card-paragraph-author {
+    margin-right: 5px;
+    font-size: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+
+}
+
+
+.container-card-body-content.information{
+    font-size: 10px;
+    width: 90%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 3px;
+    color: grey;
+    margin-top: 10px;
+}
+
+.container-card-body-content.val {
+    width: 90%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.container-card-paragraph.pref {
+    right:0px;
+    align-items: center;
+
+}
+
+
+.container-card-image {
     width: 30%;
-    background-color: rgb(194, 149, 236);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+}
+
+.image-author {
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+}
+
+
+.image-pref {
+    width: 10px;
+    height: 10px;
+}
+
+img:hover,
+.container-card-paragraph-author:hover,
+.description:hover,
+.title:hover,
+.title2:hover,
+.paragraph-help:hover,
+.paragraph-right:hover,
+.paragraph-top-bar:hover {
+    cursor: pointer;
 }
 
